@@ -1,0 +1,17 @@
+before_script:
+ - export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
+
+language: java
+
+notifications:
+  email:
+    recipients:
+      - stalk.calvin@gmail.com
+    on_success: change
+    on_failure: always
+
+jdk:
+  - oraclejdk8
+
+script: ./gradlew clean build
+
