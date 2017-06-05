@@ -6,13 +6,10 @@ package com.calvin.LinkedList
  */
 
 class DeleteNode {
-    fun <T> deleteNode(node: ListNode<T>?) {
-        if (node == null) {
-            return
+    fun <T> deleteNode(node: ListNode<T>?): Unit {
+        if (node != null) {
+            node.value = node.next!!.value
+            node.next = node.next!!.next
         }
-        node.value = node.next!!.value
-        node.next = node.next!!.next
-
-        return
     }
 }
